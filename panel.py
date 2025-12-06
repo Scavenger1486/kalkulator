@@ -449,4 +449,5 @@ table_html = f"""
 </table>
 </div>
 """
+
 st.markdown(table_html, unsafe_allow_html=True)
