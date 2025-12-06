@@ -1,8 +1,5 @@
 import streamlit as st
-import math
 import matplotlib.pyplot as plt
-import base64
-import os
 
 # ============================
 #   KONFIGURASI HALAMAN
@@ -451,3 +448,4 @@ table_html = f"""
 """
 
 st.markdown(table_html, unsafe_allow_html=True)
+
