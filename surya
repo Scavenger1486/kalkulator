@@ -450,3 +450,47 @@ table_html = f"""
 </div>
 """
 st.markdown(table_html, unsafe_allow_html=True)
+
+# ============================
+#   FOOTER / TANDA TANGAN (POJOK KANAN BAWAH)
+# ============================
+nama_mahasiswa = "Muhammad Nursawal Isnani"
+semester = "semester 3"
+nama_kampus = "Lombok Institute of Technology (LIT)"  # Ganti dengan kampusmu
+
+st.markdown(f"""
+    <style>
+    .floating-credit {{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.85); /* Putih transparan */
+        padding: 15px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 9999;
+        text-align: right;
+        min-width: 200px;
+    }}
+    .floating-credit h4 {{
+        margin: 0;
+        color: #0652DD !important;
+        font-size: 16px;
+        font-weight: 800;
+        font-family: 'Segoe UI', sans-serif;
+    }}
+    .floating-credit p {{
+        margin: 5px 0 0 0;
+        color: #555555 !important;
+        font-size: 13px;
+        font-weight: 600;
+    }}
+    </style>
+    
+    <div class="floating-credit">
+        <h4>{nama_mahasiswa}</h4>
+        <p>{nama_kampus}</p>
+    </div>
+""", unsafe_allow_html=True)
